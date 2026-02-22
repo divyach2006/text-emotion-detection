@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+            text-align: center;
+        }
+        textarea {
+            width: 400px;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            background: #4CAF50;
+ color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Emotion Detection App</h1>
+
+    <form method="POST">
+        <textarea name="utext" placeholder="Type your sentence here..."></textarea><br><br>
+        <button type="submit">Predict Emotion</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Predicted Emotion: {{ prediction }}</h2>
+    {% endif %}
+
+</body>
+</html>
